@@ -21,5 +21,11 @@ namespace UI
             new VisualizarAsientos().Show(this);
             this.Hide();
         }
+
+        private void buttonAtras_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();	   
+            this.Close();	   
+        }
     }
 }

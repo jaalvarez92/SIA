@@ -90,6 +90,7 @@
             this.buttonAtras.TabIndex = 32;
             this.buttonAtras.Text = "Atrás";
             this.buttonAtras.UseVisualStyleBackColor = true;
+            this.buttonAtras.Click += new System.EventHandler(this.buttonAtras_Click);
             // 
             // Reportes
             // 

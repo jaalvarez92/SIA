@@ -44,6 +44,10 @@
             this.HaberSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxNumeroAsiento = new System.Windows.Forms.TextBox();
+            this.botonAnularAsiento = new System.Windows.Forms.Button();
+            this.botonAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAsientos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,11 +176,51 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Fecha Documento Final";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 470);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Número de Asiento a Anular:";
+            // 
+            // textBoxNumeroAsiento
+            // 
+            this.textBoxNumeroAsiento.Location = new System.Drawing.Point(156, 467);
+            this.textBoxNumeroAsiento.Name = "textBoxNumeroAsiento";
+            this.textBoxNumeroAsiento.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNumeroAsiento.TabIndex = 9;
+            // 
+            // botonAnularAsiento
+            // 
+            this.botonAnularAsiento.Location = new System.Drawing.Point(283, 465);
+            this.botonAnularAsiento.Name = "botonAnularAsiento";
+            this.botonAnularAsiento.Size = new System.Drawing.Size(121, 23);
+            this.botonAnularAsiento.TabIndex = 10;
+            this.botonAnularAsiento.Text = "Anular Asiento";
+            this.botonAnularAsiento.UseVisualStyleBackColor = true;
+            this.botonAnularAsiento.Click += new System.EventHandler(this.botonAnularAsiento_Click);
+            // 
+            // botonAtras
+            // 
+            this.botonAtras.Location = new System.Drawing.Point(843, 468);
+            this.botonAtras.Name = "botonAtras";
+            this.botonAtras.Size = new System.Drawing.Size(75, 23);
+            this.botonAtras.TabIndex = 11;
+            this.botonAtras.Text = "Atras";
+            this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
+            // 
             // VisualizarAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 489);
+            this.ClientSize = new System.Drawing.Size(945, 495);
+            this.Controls.Add(this.botonAtras);
+            this.Controls.Add(this.botonAnularAsiento);
+            this.Controls.Add(this.textBoxNumeroAsiento);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewAsientos);
@@ -210,5 +254,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Haber;
         private System.Windows.Forms.DataGridViewTextBoxColumn DebeSistema;
         private System.Windows.Forms.DataGridViewTextBoxColumn HaberSistema;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxNumeroAsiento;
+        private System.Windows.Forms.Button botonAnularAsiento;
+        private System.Windows.Forms.Button botonAtras;
     }
 }

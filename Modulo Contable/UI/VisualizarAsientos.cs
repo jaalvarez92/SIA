@@ -66,5 +66,31 @@ namespace UI
             botonConsultarAsientos.Enabled = true;
         }
 
+        private void anularAsiento() { }
+
+        private void botonAtras_Click(object sender, EventArgs e)
+        {
+
+            this.Owner.Show();	 
+            this.Close();
+        }
+
+        private void botonAnularAsiento_Click(object sender, EventArgs e)
+        {
+            try	   
+            {	   
+                int numerlAsiento = int.Parse(textBoxNumeroAsiento.Text);	   
+                if (textBoxNumeroAsiento.Text == "")	   
+                {	   
+                    MessageBox.Show("Debe Ingresar un número de asiento a insertar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);	   
+                    return;	   
+                }	   
+	   
+                anularAsiento();	   
+            }	   
+            catch (Exception Ex) { MessageBox.Show("Debe Ingresar un número de asiento a insertar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }	   
+
+        }
+
     }
 }
