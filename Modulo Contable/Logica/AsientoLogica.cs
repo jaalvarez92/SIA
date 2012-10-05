@@ -7,7 +7,7 @@ using AccesoDatos;
 
 namespace Logica
 {
-    public static class ConsultarAsientoLogica
+    public static class AsientoLogica
     {
         public static Entities ObtenerAsientos(DateTime FechaInicio, DateTime FechaFinal)
         {
