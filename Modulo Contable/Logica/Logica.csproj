@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDLogica.cs" />
+    <Compile Include="ConsultarAsientoLogica.cs" />
     <Compile Include="CuentaLogica.cs" />
     <Compile Include="GrupoLogica.cs" />
     <Compile Include="MonedaLogica.cs" />

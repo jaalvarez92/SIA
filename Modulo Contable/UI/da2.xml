@@ -72,4 +72,8 @@
   <StoredProcedure Name="obtener_tipos_cuenta" SP="SP_OBTENER_TIPOS_CUENTA" ReturnData="True">
   </StoredProcedure>
   
+  <StoredProcedure Name="consultar_asiento" SP="dbo.SP_CONSULTAR_ASIENTO" ReturnData="TRUE">
+		<Parameter Name="p_Fecha_inicio" Type="input"/>
+		<Parameter Name="p_Fecha_fin" Type="input"/>
+</StoredProcedure>
 </DA>

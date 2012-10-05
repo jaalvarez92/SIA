@@ -61,6 +61,16 @@ namespace AccesoDatos
             Entity resultado = ManejadorBaseDatos.Instancia.EjecutarSP("crear_cuenta", parametros);
             return resultado;
         }
+
+
+        public static Entity EliminarCuenta(int pIdCuenta)
+        {
+            Entity parametros = new Entity();
+            parametros.Set("pIdCuenta", pIdCuenta);
+            Entity resultado = ManejadorBaseDatos.Instancia.EjecutarSP("eliminar_cuenta", parametros);
+            return resultado;
+        }
+
         #endregion 
     }
 }

@@ -109,6 +109,12 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisualizarAsientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualizarAsientos.designer.cs">
+      <DependentUpon>VisualizarAsientos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ActualizarTipoCambio.resx">
       <DependentUpon>ActualizarTipoCambio.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +150,9 @@
     </Compile>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarAsientos.resx">
+      <DependentUpon>VisualizarAsientos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

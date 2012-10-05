@@ -44,6 +44,10 @@
             this.checkBoxCuentaTitulo = new System.Windows.Forms.CheckBox();
             this.labelCreacionCuentas = new System.Windows.Forms.Label();
             this.buttonAtras = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.treeViewCuentas = new System.Windows.Forms.TreeView();
+            this.checkBoxEliminarCuentas = new System.Windows.Forms.CheckBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelCodigo
@@ -189,11 +193,42 @@
             this.buttonAtras.UseVisualStyleBackColor = true;
             this.buttonAtras.Click += new System.EventHandler(this.buttonAtras_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.checkBoxEliminarCuentas);
+            this.panel1.Controls.Add(this.treeViewCuentas);
+            this.panel1.Location = new System.Drawing.Point(503, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(265, 366);
+            this.panel1.TabIndex = 33;
+            // 
+            // treeViewCuentas
+            // 
+            this.treeViewCuentas.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.treeViewCuentas.Enabled = false;
+            this.treeViewCuentas.Location = new System.Drawing.Point(3, 28);
+            this.treeViewCuentas.Name = "treeViewCuentas";
+            this.treeViewCuentas.Size = new System.Drawing.Size(257, 335);
+            this.treeViewCuentas.TabIndex = 0;
+            this.treeViewCuentas.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCuentas_AfterSelect);
+            // 
+            // checkBoxEliminarCuentas
+            // 
+            this.checkBoxEliminarCuentas.AutoSize = true;
+            this.checkBoxEliminarCuentas.Location = new System.Drawing.Point(80, 4);
+            this.checkBoxEliminarCuentas.Name = "checkBoxEliminarCuentas";
+            this.checkBoxEliminarCuentas.Size = new System.Drawing.Size(104, 17);
+            this.checkBoxEliminarCuentas.TabIndex = 1;
+            this.checkBoxEliminarCuentas.Text = "Eliminar Cuentas";
+            this.checkBoxEliminarCuentas.UseVisualStyleBackColor = true;
+            this.checkBoxEliminarCuentas.CheckedChanged += new System.EventHandler(this.checkBoxEliminarCuentas_CheckedChanged);
+            // 
             // CrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 367);
+            this.ClientSize = new System.Drawing.Size(763, 367);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonAtras);
             this.Controls.Add(this.labelCodigo);
             this.Controls.Add(this.textBoxCodigo);
@@ -212,6 +247,8 @@
             this.Controls.Add(this.labelCreacionCuentas);
             this.Name = "CrearCuenta";
             this.Text = "CrearCuenta";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,6 +272,9 @@
         private System.Windows.Forms.CheckBox checkBoxCuentaTitulo;
         private System.Windows.Forms.Label labelCreacionCuentas;
         private System.Windows.Forms.Button buttonAtras;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TreeView treeViewCuentas;
+        private System.Windows.Forms.CheckBox checkBoxEliminarCuentas;
 
     }
 }

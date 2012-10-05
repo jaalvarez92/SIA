@@ -28,6 +28,13 @@ namespace Logica
             Entity result = CuentaDA.CrearCuenta(pCodigo, pNombre, pNombreExtranjero, esTitulo, pIdTipoCuenta, pIdCuentaPadre, pIdMoneda);
             return (Boolean)result.Get("estado");
         }
+
+
+        public static Boolean EliminarCuenta(int pIdCuenta)
+        {
+            Entity result = CuentaDA.EliminarCuenta(pIdCuenta);
+            return (Boolean)result.Get("estado");
+        }
         #endregion
 
     }
