@@ -14,6 +14,10 @@ namespace Logica
             return AsientoDA.ObtenerAsientos(FechaInicio, FechaFinal);
         }
 
+        public static int IngresarAsiento(DateTime pFechaDocumento, String pDescripcion) {
+            return 1;
+        }
+
 
     }
 }

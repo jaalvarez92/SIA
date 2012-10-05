@@ -66,13 +66,13 @@ namespace AccesoDatos
         {
             get
             {
-                if (string.IsNullOrEmpty(Configuracion._esquema))
+                /*/if (string.IsNullOrEmpty(Configuracion._esquema))
                 {
                     Configuracion._esquema =
                         ConfigurationManager.AppSettings[ESQUEMA];
-                }
+                }*/
 
-                return Configuracion._esquema;
+                return ConfigurationManager.AppSettings[ESQUEMA];
             }
         }
 
