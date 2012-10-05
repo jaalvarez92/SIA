@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -8,25 +9,17 @@ using System.Text;
 
 namespace WebServiceGenerarAsiento
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     public class ERPAsientos : IERPAsientos
     {
-        public string GetData(int value)
+
+        public int ingresarNuevoAsiento(int pIdTipoAsiento, DateTime pFechaContabilizado, DateTime pFechaDocumento, string pReferencia1, string pReferencia2)
         {
-            return string.Format("You entered: {0}", value);
+            throw new NotImplementedException();
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public int ingresarCuentasAsiento(int pIdAsiento, int pIdCuenta, int pMontoLocal, int pMontoSistema, bool pDebeHaber)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            throw new NotImplementedException();
         }
     }
 }
