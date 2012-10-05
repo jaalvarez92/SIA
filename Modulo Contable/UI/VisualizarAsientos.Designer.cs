@@ -79,6 +79,7 @@
             this.botonCambiarFecha.TabIndex = 4;
             this.botonCambiarFecha.Text = "Cambiar Fecha";
             this.botonCambiarFecha.UseVisualStyleBackColor = true;
+            this.botonCambiarFecha.Click += new System.EventHandler(this.botonCambiarFecha_Click);
             // 
             // dataGridViewAsientos
             // 

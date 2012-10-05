@@ -77,6 +77,7 @@
             this.buttonReportes.TabIndex = 3;
             this.buttonReportes.Text = "Reportes y Consultas";
             this.buttonReportes.UseVisualStyleBackColor = true;
+            this.buttonReportes.Click += new System.EventHandler(this.buttonReportes_Click);
             // 
             // buttonCerrarSesion
             // 

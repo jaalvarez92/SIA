@@ -51,11 +51,20 @@ namespace UI
         #region Eventos
         private void botonConsultarAsientos_Click(object sender, EventArgs e)
         {
-            botonCambiarFecha.Enabled = false;
             botonConsultarAsientos.Enabled = false;
+            botonCambiarFecha.Enabled = true;
+            dateTimePickerFinal.Enabled = false;
+            dateTimePickerInicio.Enabled = false;
             mostrarAsientos();
         }
         #endregion
+
+        private void botonCambiarFecha_Click(object sender, EventArgs e)
+        {
+            dateTimePickerFinal.Enabled = true;
+            dateTimePickerInicio.Enabled = true;
+            botonConsultarAsientos.Enabled = true;
+        }
 
     }
 }

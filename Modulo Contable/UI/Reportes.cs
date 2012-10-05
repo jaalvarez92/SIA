@@ -15,5 +15,11 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new VisualizarAsientos().Show(this);
+            this.Hide();
+        }
     }
 }

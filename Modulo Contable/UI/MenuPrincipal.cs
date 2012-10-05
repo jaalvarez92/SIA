@@ -32,7 +32,7 @@ namespace UI
 
         private void buttonCerrarSesion_Click(object sender, EventArgs e)
         {
-
+            ((Login)this.Owner).LLenarComboBoxEmpresas();
             this.Owner.Show();
             this.Owner.Refresh();
             this.Close();
@@ -56,6 +56,12 @@ namespace UI
             this.Hide();
         }
         #endregion
+
+        private void buttonReportes_Click(object sender, EventArgs e)
+        {
+            new Reportes().Show(this);
+            this.Hide();
+        }
 
     }
 }

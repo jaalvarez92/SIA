@@ -49,7 +49,8 @@ namespace UI
         }
 
 
-        private void LLenarComboBoxEmpresas(){
+        public void LLenarComboBoxEmpresas(){
+            comboBoxEmpresa.Items.Clear();
             _Empresas = GrupoLogica.ObtenerEmpresasGrupo();
             foreach (Entity empresa in _Empresas)
             {
@@ -104,7 +105,8 @@ namespace UI
         {
             String empresa = comboBoxEmpresa.SelectedItem + "";
             Entity empresa_seleccionada = _Empresas.Get("nombreempresa", NombreEmpresa);
-            ConfigurationManager.AppSettings.Set("Esquema", ((String)empresa_seleccionada.Get("schemagrupo")).ToString());
+            String schema =(String)empresa_seleccionada.Get("schemagrupo").ToString();
+            ConfigurationManager.AppSettings.Set("Esquema", schema);
         }
     }
 }
