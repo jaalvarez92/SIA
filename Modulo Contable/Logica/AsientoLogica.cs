@@ -11,7 +11,9 @@ namespace Logica
     {
         public static Entities ObtenerAsientos(DateTime FechaInicio, DateTime FechaFinal)
         {
-            return ConsultarAsientoDA.ObtenerAsientos(FechaInicio, FechaFinal);
+            return AsientoDA.ObtenerAsientos(FechaInicio, FechaFinal);
         }
+
+
     }
 }

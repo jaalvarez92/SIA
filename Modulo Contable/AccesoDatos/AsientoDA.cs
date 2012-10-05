@@ -6,7 +6,7 @@ using Entidades;
 
 namespace AccesoDatos
 {
-    public static class ConsultarAsientoDA
+    public static class AsientoDA
     {
         public static Entities ObtenerAsientos(DateTime FechaInicio, DateTime FechaFinal)
         {
