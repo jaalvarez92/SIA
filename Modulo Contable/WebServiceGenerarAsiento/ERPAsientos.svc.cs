@@ -6,20 +6,22 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Logica;
 
 namespace WebServiceGenerarAsiento
 {
     public class ERPAsientos : IERPAsientos
     {
 
-        public int ingresarNuevoAsiento(int pIdTipoAsiento, DateTime pFechaContabilizado, DateTime pFechaDocumento, string pReferencia1, string pReferencia2)
+        public int ingresarNuevoAsiento(DateTime pFechaDocumento)
         {
-            throw new NotImplementedException();
+            return AsientoLogica.IngresarAsiento(pFechaDocumento); ;
         }
 
-        public int ingresarCuentasAsiento(int pIdAsiento, int pIdCuenta, int pMontoLocal, int pMontoSistema, bool pDebeHaber)
+        public int ingresarCuentasAsiento(int pIdAsiento, int pIdCuenta, decimal pMontoLocal, decimal pMontoSistema, bool pDebeHaber)
         {
-            throw new NotImplementedException();
+            AsientoLogica.IngresarLineaAsiento(pIdAsiento, pIdCuenta, pMontoLocal, pMontoSistema, pDebeHaber);
+            return 1;
         }
     }
 }

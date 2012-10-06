@@ -3,6 +3,11 @@
     <Parameter Name="pNombreUsuario" Type="input"/>
 	<Parameter Name="pContrasena" Type="input"/>
   </StoredProcedure>
+
+  <StoredProcedure Name="asignar_periodo_contable" SP="SP_INGRESAR_PERIODOCONTABLE_A_EMPRESA" ReturnData="FALSE">
+	<Parameter Name="pIdEmpresa" Type="input"/>
+	<Parameter Name="pIdPeriodoContable" Type="input"/>
+  </StoredProcedure>
   
   <StoredProcedure Name="crear_cuenta" SP="SP_CREAR_CUENTA" ReturnData="FALSE">
     <Parameter Name="pCodigo" Type="input"/>
@@ -24,6 +29,7 @@
 	<Parameter Name="pMonedaSistema" Type="input"/>
   </StoredProcedure>
   
+  
   <StoredProcedure Name="crear_periodo_contable" SP="SP_CREAR_PERIODO_CONTABLE" ReturnData="True">
 	<Parameter Name="pFechaInicioC" Type="input"/>
 	<Parameter Name="pFechaFinC" Type="input"/>
@@ -32,11 +38,6 @@
 	<Parameter Name="pFechaInicioV" Type="input"/>
 	<Parameter Name="pFechaFinV" Type="input"/>
   </StoredProcedure>
-  
-  <StoredProcedure Name="consultar_asiento" SP="dbo.SP_CONSULTAR_ASIENTO" ReturnData="TRUE">
-		<Parameter Name="p_Fecha_inicio" Type="input"/>
-		<Parameter Name="p_Fecha_fin" Type="input"/>
-	</StoredProcedure>
   
   <StoredProcedure Name="ingresar_tipo_cambio" SP="SP_INGRESAR_TIPO_CAMBIO" ReturnData="FALSE">
 	<Parameter Name="pIdMonedaBase" Type="input"/>
@@ -70,6 +71,51 @@
   
   <StoredProcedure Name="obtener_tipos_cuenta" SP="SP_OBTENER_TIPOS_CUENTA" ReturnData="True">
   </StoredProcedure>
+  
+  <StoredProcedure Name="agregar_cuenta_a_asiento" SP="SP_AGREGAR_CUENTA_A_ASIENTO" ReturnData="False">
+	<Parameter Name="pIdAsiento" Type="input"/>
+	<Parameter Name="pIdCuenta" Type="input"/>
+	<Parameter Name="pMonto_Local" Type="input"/>
+	<Parameter Name="pMonto_Sistema" Type="input"/>
+	<Parameter Name="pDebeHaber" Type="input"/>
+  </StoredProcedure>
+  
+  <StoredProcedure Name="balance_comprobacion" SP="SP_BALANCE_COMPROBACION" ReturnData="True">
+	<Parameter Name="pIdEmpresa" Type="input"/>
+	<Parameter Name="p_Fecha_inicio" Type="input"/>
+	<Parameter Name="p_Fecha_fin" Type="input"/>	
+  </StoredProcedure>
+  
+  <StoredProcedure Name="consultar_asiento" SP="SP_CONSULTAR_ASIENTO" ReturnData="True">
+	<Parameter Name="p_Fecha_inicio" Type="input"/>
+	<Parameter Name="p_Fecha_fin" Type="input"/>
+  </StoredProcedure>
+  
+  <StoredProcedure Name="crear_asiento_sin_cuentas" SP="SP_CREAR_ASIENTO_SINCUENTAS" ReturnData="True">
+	<Parameter Name="pIdTipoAsiento" Type="input"/>
+	<Parameter Name="pFechaContabilizado" Type="input"/>
+	<Parameter Name="pFechaDocumento" Type="input"/>
+	<Parameter Name="pReferencia1" Type="input"/>
+	<Parameter Name="pReferencia2" Type="input"/>
+  </StoredProcedure>
+    
+  <StoredProcedure Name="eliminar_cuenta" SP="SP_ELIMINAR_CUENTA" ReturnData="False">
+	<Parameter Name="pIdCuenta" Type="input"/>
+  </StoredProcedure>
+  
+  <StoredProcedure Name="obtener_balance_general" SP="SP_OBTENER_BALANCEGENERAL" ReturnData="True">
+	<Parameter Name="pIdEmpresa" Type="input"/>
+  </StoredProcedure>
+  
+  <StoredProcedure Name="obtener_estado_resultados" SP="SP_OBTENER_ESTADORESULTADOS" ReturnData="True">
+	<Parameter Name="pIdEmpresa" Type="input"/>
+  </StoredProcedure>
+
+  <StoredProcedure Name="realizar_cierre_periodo" SP="SP_REALIZAR_CIERREPERIODO" ReturnData="True">
+	<Parameter Name="pIdEmpresa" Type="input"/>
+  </StoredProcedure>
+  
+  
   
   
 </DA>

@@ -13,9 +13,9 @@ namespace WebServiceGenerarAsiento
     {
 
         [OperationContract]
-        int ingresarNuevoAsiento(int pIdTipoAsiento, DateTime pFechaContabilizado, DateTime pFechaDocumento, string pReferencia1, string pReferencia2);
+        int ingresarNuevoAsiento(DateTime pFechaDocumento);
 
         [OperationContract]
-        int ingresarCuentasAsiento(int pIdAsiento, int pIdCuenta, int pMontoLocal, int pMontoSistema, bool pDebeHaber);
+        int ingresarCuentasAsiento(int pIdAsiento, int pIdCuenta, decimal pMontoLocal, decimal pMontoSistema, bool pDebeHaber);
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Entidades;
 using Logica;
+using UI.ERPAsientos;
 
 namespace UI
 {
@@ -324,7 +325,7 @@ namespace UI
                 if (tabla.Count > 0)
                 {
                     Entity tipo_cambio_ = tabla[0];
-                    decimal monto = (decimal)tipo_cambio_.Get("monto");
+                    decimal monto = (decimal)tipo_cambio_.Get("cambio");
                     dataGridViewAsientos.Rows[pIdFila].Cells[pIdColumna + 2].Value = (decimal.Parse(dataGridViewAsientos.Rows[pIdFila].Cells[pIdColumna].Value.ToString()) * monto).ToString();
                 }
                 else
@@ -339,7 +340,7 @@ namespace UI
                 if (tabla.Count > 0)
                 {
                     Entity tipo_cambio_ = tabla[0];
-                    decimal monto = (decimal)tipo_cambio_.Get("monto");
+                    decimal monto = (decimal)tipo_cambio_.Get("cambio");
                     dataGridViewAsientos.Rows[pIdFila].Cells[pIdColumna - 2].Value = (decimal.Parse(dataGridViewAsientos.Rows[pIdFila].Cells[pIdColumna].Value.ToString()) * monto).ToString();
                 }
                 else
@@ -354,7 +355,7 @@ namespace UI
                 if (tabla.Count > 0)
                 {
                     Entity tipo_cambio_ = tabla[0];
-                    decimal monto = (decimal)tipo_cambio_.Get("monto");
+                    decimal monto = (decimal)tipo_cambio_.Get("cambio");
                     dataGridViewAsientos.Rows[pIdFila].Cells[pIdColumna - 4].Value = (decimal.Parse(dataGridViewAsientos.Rows[pIdFila].Cells[pIdColumna].Value.ToString()) * monto).ToString();
                     ProcesarTipoCambio(pIdFila, pIdColumna-4);
                 }
@@ -365,6 +366,35 @@ namespace UI
             }
             CalcularTotales();
 
+        }
+
+        private int ObtenerIdCuenta(string pNombre)
+        {
+            int id=0;
+            foreach (Entity cuenta in _Cuentas)
+            {
+                if (((string)cuenta.Get("Nombre")).Equals(pNombre))
+                {
+                    id = (int)cuenta.Get("IdCuenta");
+                }
+            }
+            return id;
+        }
+
+        
+        private void GuardarAsiento()
+        {
+            //int idAsiento = AsientoLogica.IngresarAsiento(FechaDocumento);
+            ERPAsientos.ERPAsientosClient cliente = new ERPAsientosClient();
+            int idAsiento = cliente.ingresarNuevoAsiento(FechaDocumento);
+            foreach (DataGridViewRow dr in dataGridViewAsientos.Rows)
+            {
+                int idcuenta = ObtenerIdCuenta(dr.Cells[0].Value.ToString());
+                if (!dr.Cells[2].Value.Equals(""))
+                    cliente.ingresarCuentasAsiento(idAsiento, idcuenta, Decimal.Parse(dr.Cells[2].Value.ToString()), Decimal.Parse(dr.Cells[4].Value.ToString()), false);
+                else
+                    cliente.ingresarCuentasAsiento(idAsiento, idcuenta, Decimal.Parse(dr.Cells[3].Value.ToString()), Decimal.Parse(dr.Cells[5].Value.ToString()), true);
+            }
         }
         #endregion
 
@@ -380,7 +410,7 @@ namespace UI
         {
             if (CalcularTotales())
             {
-                //Llamar a metodo que inserta asiento...osea WS
+                GuardarAsiento();
             }
             else
             {
