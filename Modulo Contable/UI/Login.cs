@@ -49,12 +49,21 @@ namespace UI
         }
 
 
-        public void LLenarComboBoxEmpresas(){
-            comboBoxEmpresa.Items.Clear();
-            _Empresas = GrupoLogica.ObtenerEmpresasGrupo();
-            foreach (Entity empresa in _Empresas)
+        public void LLenarComboBoxEmpresas()
+        {
+            try
             {
-                comboBoxEmpresa.Items.Add((String)empresa.Get("nombreempresa"));
+                comboBoxEmpresa.Items.Clear();
+                _Empresas = GrupoLogica.ObtenerEmpresasGrupo();
+                foreach (Entity empresa in _Empresas)
+                {
+                    comboBoxEmpresa.Items.Add((String)empresa.Get("nombreempresa"));
+                }
+                comboBoxEmpresa.SelectedIndex = 0;
+            }
+            catch
+            {
+
             }
         }
 
@@ -109,5 +118,11 @@ namespace UI
             String schema =(String)empresa_seleccionada.Get("schemagrupo").ToString();
             ConfigurationManager.AppSettings.Set("Esquema", schema);
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Exit();
+        }
+       
     }
 }
