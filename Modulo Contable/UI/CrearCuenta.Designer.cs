@@ -42,18 +42,21 @@
             this.textBoxNombreCuenta = new System.Windows.Forms.TextBox();
             this.comboBoxCuentaPadre = new System.Windows.Forms.ComboBox();
             this.checkBoxCuentaTitulo = new System.Windows.Forms.CheckBox();
-            this.labelCreacionCuentas = new System.Windows.Forms.Label();
             this.buttonAtras = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.treeViewCuentas = new System.Windows.Forms.TreeView();
             this.checkBoxEliminarCuentas = new System.Windows.Forms.CheckBox();
+            this.treeViewCuentas = new System.Windows.Forms.TreeView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelCodigo
             // 
             this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Location = new System.Drawing.Point(47, 76);
+            this.labelCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelCodigo.Location = new System.Drawing.Point(24, 66);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(40, 13);
             this.labelCodigo.TabIndex = 29;
@@ -61,15 +64,17 @@
             // 
             // textBoxCodigo
             // 
-            this.textBoxCodigo.Location = new System.Drawing.Point(15, 107);
+            this.textBoxCodigo.Location = new System.Drawing.Point(24, 82);
             this.textBoxCodigo.Name = "textBoxCodigo";
-            this.textBoxCodigo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCodigo.Size = new System.Drawing.Size(100, 22);
             this.textBoxCodigo.TabIndex = 28;
             // 
             // labelNombreCuentaExtranjera
             // 
             this.labelNombreCuentaExtranjera.AutoSize = true;
-            this.labelNombreCuentaExtranjera.Location = new System.Drawing.Point(262, 138);
+            this.labelNombreCuentaExtranjera.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreCuentaExtranjera.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelNombreCuentaExtranjera.Location = new System.Drawing.Point(198, 141);
             this.labelNombreCuentaExtranjera.Name = "labelNombreCuentaExtranjera";
             this.labelNombreCuentaExtranjera.Size = new System.Drawing.Size(131, 13);
             this.labelNombreCuentaExtranjera.TabIndex = 27;
@@ -77,25 +82,32 @@
             // 
             // textBoxNombreCuentaExtranjera
             // 
-            this.textBoxNombreCuentaExtranjera.Location = new System.Drawing.Point(186, 154);
+            this.textBoxNombreCuentaExtranjera.Location = new System.Drawing.Point(199, 157);
             this.textBoxNombreCuentaExtranjera.Name = "textBoxNombreCuentaExtranjera";
-            this.textBoxNombreCuentaExtranjera.Size = new System.Drawing.Size(296, 20);
+            this.textBoxNombreCuentaExtranjera.Size = new System.Drawing.Size(235, 22);
             this.textBoxNombreCuentaExtranjera.TabIndex = 26;
             // 
             // botonCrearCuenta
             // 
-            this.botonCrearCuenta.Location = new System.Drawing.Point(196, 278);
+            this.botonCrearCuenta.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.botonCrearCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonCrearCuenta.ForeColor = System.Drawing.Color.White;
+            this.botonCrearCuenta.Image = global::UI.Properties.Resources.accept;
+            this.botonCrearCuenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonCrearCuenta.Location = new System.Drawing.Point(514, 371);
             this.botonCrearCuenta.Name = "botonCrearCuenta";
-            this.botonCrearCuenta.Size = new System.Drawing.Size(75, 23);
+            this.botonCrearCuenta.Size = new System.Drawing.Size(112, 31);
             this.botonCrearCuenta.TabIndex = 25;
-            this.botonCrearCuenta.Text = "Crear Cuenta";
-            this.botonCrearCuenta.UseVisualStyleBackColor = true;
+            this.botonCrearCuenta.Text = "Guardar";
+            this.botonCrearCuenta.UseVisualStyleBackColor = false;
             this.botonCrearCuenta.Click += new System.EventHandler(this.botonCrearCuenta_Click);
             // 
             // labelCuentaPadre
             // 
             this.labelCuentaPadre.AutoSize = true;
-            this.labelCuentaPadre.Location = new System.Drawing.Point(293, 196);
+            this.labelCuentaPadre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCuentaPadre.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelCuentaPadre.Location = new System.Drawing.Point(24, 219);
             this.labelCuentaPadre.Name = "labelCuentaPadre";
             this.labelCuentaPadre.Size = new System.Drawing.Size(72, 13);
             this.labelCuentaPadre.TabIndex = 24;
@@ -104,7 +116,9 @@
             // labelTipoCuenta
             // 
             this.labelTipoCuenta.AutoSize = true;
-            this.labelTipoCuenta.Location = new System.Drawing.Point(42, 137);
+            this.labelTipoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipoCuenta.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelTipoCuenta.Location = new System.Drawing.Point(24, 139);
             this.labelTipoCuenta.Name = "labelTipoCuenta";
             this.labelTipoCuenta.Size = new System.Drawing.Size(65, 13);
             this.labelTipoCuenta.TabIndex = 23;
@@ -113,7 +127,9 @@
             // labelNombreCuenta
             // 
             this.labelNombreCuenta.AutoSize = true;
-            this.labelNombreCuenta.Location = new System.Drawing.Point(284, 76);
+            this.labelNombreCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombreCuenta.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelNombreCuenta.Location = new System.Drawing.Point(195, 66);
             this.labelNombreCuenta.Name = "labelNombreCuenta";
             this.labelNombreCuenta.Size = new System.Drawing.Size(81, 13);
             this.labelNombreCuenta.TabIndex = 22;
@@ -122,7 +138,9 @@
             // labelMonedaCuenta
             // 
             this.labelMonedaCuenta.AutoSize = true;
-            this.labelMonedaCuenta.Location = new System.Drawing.Point(134, 76);
+            this.labelMonedaCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMonedaCuenta.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelMonedaCuenta.Location = new System.Drawing.Point(130, 66);
             this.labelMonedaCuenta.Name = "labelMonedaCuenta";
             this.labelMonedaCuenta.Size = new System.Drawing.Size(46, 13);
             this.labelMonedaCuenta.TabIndex = 21;
@@ -132,90 +150,75 @@
             // 
             this.comboBoxTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipoCuenta.FormattingEnabled = true;
-            this.comboBoxTipoCuenta.Location = new System.Drawing.Point(15, 153);
+            this.comboBoxTipoCuenta.Location = new System.Drawing.Point(27, 155);
             this.comboBoxTipoCuenta.Name = "comboBoxTipoCuenta";
-            this.comboBoxTipoCuenta.Size = new System.Drawing.Size(165, 21);
+            this.comboBoxTipoCuenta.Size = new System.Drawing.Size(165, 24);
             this.comboBoxTipoCuenta.TabIndex = 20;
             // 
             // comboBoxMoneda
             // 
             this.comboBoxMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMoneda.FormattingEnabled = true;
-            this.comboBoxMoneda.Location = new System.Drawing.Point(123, 107);
+            this.comboBoxMoneda.Location = new System.Drawing.Point(132, 82);
             this.comboBoxMoneda.Name = "comboBoxMoneda";
-            this.comboBoxMoneda.Size = new System.Drawing.Size(57, 21);
+            this.comboBoxMoneda.Size = new System.Drawing.Size(57, 24);
             this.comboBoxMoneda.TabIndex = 19;
             // 
             // textBoxNombreCuenta
             // 
-            this.textBoxNombreCuenta.Location = new System.Drawing.Point(186, 108);
+            this.textBoxNombreCuenta.Location = new System.Drawing.Point(195, 82);
             this.textBoxNombreCuenta.Name = "textBoxNombreCuenta";
-            this.textBoxNombreCuenta.Size = new System.Drawing.Size(296, 20);
+            this.textBoxNombreCuenta.Size = new System.Drawing.Size(236, 22);
             this.textBoxNombreCuenta.TabIndex = 18;
             // 
             // comboBoxCuentaPadre
             // 
             this.comboBoxCuentaPadre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCuentaPadre.FormattingEnabled = true;
-            this.comboBoxCuentaPadre.Location = new System.Drawing.Point(186, 212);
+            this.comboBoxCuentaPadre.Location = new System.Drawing.Point(24, 235);
             this.comboBoxCuentaPadre.Name = "comboBoxCuentaPadre";
-            this.comboBoxCuentaPadre.Size = new System.Drawing.Size(296, 21);
+            this.comboBoxCuentaPadre.Size = new System.Drawing.Size(304, 24);
             this.comboBoxCuentaPadre.TabIndex = 17;
             // 
             // checkBoxCuentaTitulo
             // 
             this.checkBoxCuentaTitulo.AutoSize = true;
-            this.checkBoxCuentaTitulo.Location = new System.Drawing.Point(35, 214);
+            this.checkBoxCuentaTitulo.Location = new System.Drawing.Point(343, 237);
             this.checkBoxCuentaTitulo.Name = "checkBoxCuentaTitulo";
-            this.checkBoxCuentaTitulo.Size = new System.Drawing.Size(89, 17);
+            this.checkBoxCuentaTitulo.Size = new System.Drawing.Size(105, 20);
             this.checkBoxCuentaTitulo.TabIndex = 16;
             this.checkBoxCuentaTitulo.Text = "Cuenta Titulo";
             this.checkBoxCuentaTitulo.UseVisualStyleBackColor = true;
             this.checkBoxCuentaTitulo.CheckedChanged += new System.EventHandler(this.checkBoxCuentaTitulo_CheckedChanged);
             // 
-            // labelCreacionCuentas
-            // 
-            this.labelCreacionCuentas.AutoSize = true;
-            this.labelCreacionCuentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCreacionCuentas.Location = new System.Drawing.Point(77, 9);
-            this.labelCreacionCuentas.Name = "labelCreacionCuentas";
-            this.labelCreacionCuentas.Size = new System.Drawing.Size(307, 33);
-            this.labelCreacionCuentas.TabIndex = 15;
-            this.labelCreacionCuentas.Text = "Creación de Cuentas";
-            // 
             // buttonAtras
             // 
-            this.buttonAtras.Location = new System.Drawing.Point(407, 332);
+            this.buttonAtras.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAtras.ForeColor = System.Drawing.Color.White;
+            this.buttonAtras.Image = global::UI.Properties.Resources.arrow_left;
+            this.buttonAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAtras.Location = new System.Drawing.Point(634, 371);
             this.buttonAtras.Name = "buttonAtras";
-            this.buttonAtras.Size = new System.Drawing.Size(75, 23);
+            this.buttonAtras.Size = new System.Drawing.Size(112, 31);
             this.buttonAtras.TabIndex = 32;
             this.buttonAtras.Text = "Atrás";
-            this.buttonAtras.UseVisualStyleBackColor = true;
+            this.buttonAtras.UseVisualStyleBackColor = false;
             this.buttonAtras.Click += new System.EventHandler(this.buttonAtras_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.checkBoxEliminarCuentas);
             this.panel1.Controls.Add(this.treeViewCuentas);
-            this.panel1.Location = new System.Drawing.Point(503, 1);
+            this.panel1.Location = new System.Drawing.Point(12, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 366);
             this.panel1.TabIndex = 33;
             // 
-            // treeViewCuentas
-            // 
-            this.treeViewCuentas.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.treeViewCuentas.Enabled = false;
-            this.treeViewCuentas.Location = new System.Drawing.Point(3, 28);
-            this.treeViewCuentas.Name = "treeViewCuentas";
-            this.treeViewCuentas.Size = new System.Drawing.Size(257, 335);
-            this.treeViewCuentas.TabIndex = 0;
-            this.treeViewCuentas.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCuentas_AfterSelect);
-            // 
             // checkBoxEliminarCuentas
             // 
             this.checkBoxEliminarCuentas.AutoSize = true;
-            this.checkBoxEliminarCuentas.Location = new System.Drawing.Point(80, 4);
+            this.checkBoxEliminarCuentas.Location = new System.Drawing.Point(3, 5);
             this.checkBoxEliminarCuentas.Name = "checkBoxEliminarCuentas";
             this.checkBoxEliminarCuentas.Size = new System.Drawing.Size(104, 17);
             this.checkBoxEliminarCuentas.TabIndex = 1;
@@ -223,34 +226,58 @@
             this.checkBoxEliminarCuentas.UseVisualStyleBackColor = true;
             this.checkBoxEliminarCuentas.CheckedChanged += new System.EventHandler(this.checkBoxEliminarCuentas_CheckedChanged);
             // 
+            // treeViewCuentas
+            // 
+            this.treeViewCuentas.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.treeViewCuentas.Enabled = false;
+            this.treeViewCuentas.Location = new System.Drawing.Point(3, 28);
+            this.treeViewCuentas.Name = "treeViewCuentas";
+            this.treeViewCuentas.Size = new System.Drawing.Size(250, 335);
+            this.treeViewCuentas.TabIndex = 0;
+            this.treeViewCuentas.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCuentas_AfterSelect);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelCodigo);
+            this.groupBox1.Controls.Add(this.comboBoxMoneda);
+            this.groupBox1.Controls.Add(this.labelMonedaCuenta);
+            this.groupBox1.Controls.Add(this.labelNombreCuentaExtranjera);
+            this.groupBox1.Controls.Add(this.labelCuentaPadre);
+            this.groupBox1.Controls.Add(this.checkBoxCuentaTitulo);
+            this.groupBox1.Controls.Add(this.textBoxCodigo);
+            this.groupBox1.Controls.Add(this.comboBoxCuentaPadre);
+            this.groupBox1.Controls.Add(this.textBoxNombreCuentaExtranjera);
+            this.groupBox1.Controls.Add(this.labelNombreCuenta);
+            this.groupBox1.Controls.Add(this.textBoxNombreCuenta);
+            this.groupBox1.Controls.Add(this.labelTipoCuenta);
+            this.groupBox1.Controls.Add(this.comboBoxTipoCuenta);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(298, 41);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(454, 304);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nueva Cuenta";
+            // 
             // CrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 367);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(770, 426);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonAtras);
-            this.Controls.Add(this.labelCodigo);
-            this.Controls.Add(this.textBoxCodigo);
-            this.Controls.Add(this.labelNombreCuentaExtranjera);
-            this.Controls.Add(this.textBoxNombreCuentaExtranjera);
             this.Controls.Add(this.botonCrearCuenta);
-            this.Controls.Add(this.labelCuentaPadre);
-            this.Controls.Add(this.labelTipoCuenta);
-            this.Controls.Add(this.labelNombreCuenta);
-            this.Controls.Add(this.labelMonedaCuenta);
-            this.Controls.Add(this.comboBoxTipoCuenta);
-            this.Controls.Add(this.comboBoxMoneda);
-            this.Controls.Add(this.textBoxNombreCuenta);
-            this.Controls.Add(this.comboBoxCuentaPadre);
-            this.Controls.Add(this.checkBoxCuentaTitulo);
-            this.Controls.Add(this.labelCreacionCuentas);
+            this.MaximizeBox = false;
             this.Name = "CrearCuenta";
-            this.Text = "CrearCuenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " Crear Cuenta";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -270,11 +297,11 @@
         private System.Windows.Forms.TextBox textBoxNombreCuenta;
         private System.Windows.Forms.ComboBox comboBoxCuentaPadre;
         private System.Windows.Forms.CheckBox checkBoxCuentaTitulo;
-        private System.Windows.Forms.Label labelCreacionCuentas;
         private System.Windows.Forms.Button buttonAtras;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TreeView treeViewCuentas;
         private System.Windows.Forms.CheckBox checkBoxEliminarCuentas;
+        private System.Windows.Forms.GroupBox groupBox1;
 
     }
 }

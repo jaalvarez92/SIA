@@ -67,22 +67,28 @@
             // 
             // botonConsultarAsientos
             // 
-            this.botonConsultarAsientos.Location = new System.Drawing.Point(434, 24);
+            this.botonConsultarAsientos.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.botonConsultarAsientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonConsultarAsientos.ForeColor = System.Drawing.Color.White;
+            this.botonConsultarAsientos.Location = new System.Drawing.Point(406, 24);
             this.botonConsultarAsientos.Name = "botonConsultarAsientos";
             this.botonConsultarAsientos.Size = new System.Drawing.Size(138, 23);
             this.botonConsultarAsientos.TabIndex = 2;
             this.botonConsultarAsientos.Text = "Consultar Asientos";
-            this.botonConsultarAsientos.UseVisualStyleBackColor = true;
+            this.botonConsultarAsientos.UseVisualStyleBackColor = false;
             this.botonConsultarAsientos.Click += new System.EventHandler(this.botonConsultarAsientos_Click);
             // 
             // botonCambiarFecha
             // 
+            this.botonCambiarFecha.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.botonCambiarFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonCambiarFecha.ForeColor = System.Drawing.Color.White;
             this.botonCambiarFecha.Location = new System.Drawing.Point(241, 23);
             this.botonCambiarFecha.Name = "botonCambiarFecha";
             this.botonCambiarFecha.Size = new System.Drawing.Size(142, 23);
             this.botonCambiarFecha.TabIndex = 4;
             this.botonCambiarFecha.Text = "Cambiar Fecha";
-            this.botonCambiarFecha.UseVisualStyleBackColor = true;
+            this.botonCambiarFecha.UseVisualStyleBackColor = false;
             this.botonCambiarFecha.Click += new System.EventHandler(this.botonCambiarFecha_Click);
             // 
             // dataGridViewAsientos
@@ -194,28 +200,39 @@
             // 
             // botonAnularAsiento
             // 
+            this.botonAnularAsiento.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.botonAnularAsiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonAnularAsiento.ForeColor = System.Drawing.Color.White;
+            this.botonAnularAsiento.Image = global::UI.Properties.Resources.delete;
+            this.botonAnularAsiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.botonAnularAsiento.Location = new System.Drawing.Point(283, 465);
             this.botonAnularAsiento.Name = "botonAnularAsiento";
-            this.botonAnularAsiento.Size = new System.Drawing.Size(121, 23);
+            this.botonAnularAsiento.Size = new System.Drawing.Size(150, 23);
             this.botonAnularAsiento.TabIndex = 10;
             this.botonAnularAsiento.Text = "Anular Asiento";
-            this.botonAnularAsiento.UseVisualStyleBackColor = true;
+            this.botonAnularAsiento.UseVisualStyleBackColor = false;
             this.botonAnularAsiento.Click += new System.EventHandler(this.botonAnularAsiento_Click);
             // 
             // botonAtras
             // 
-            this.botonAtras.Location = new System.Drawing.Point(843, 468);
+            this.botonAtras.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.botonAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonAtras.ForeColor = System.Drawing.Color.White;
+            this.botonAtras.Image = global::UI.Properties.Resources.arrow_left;
+            this.botonAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonAtras.Location = new System.Drawing.Point(820, 468);
             this.botonAtras.Name = "botonAtras";
-            this.botonAtras.Size = new System.Drawing.Size(75, 23);
+            this.botonAtras.Size = new System.Drawing.Size(98, 23);
             this.botonAtras.TabIndex = 11;
             this.botonAtras.Text = "Atras";
-            this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.UseVisualStyleBackColor = false;
             this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
             // VisualizarAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(945, 495);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.botonAnularAsiento);
@@ -229,6 +246,7 @@
             this.Controls.Add(this.dateTimePickerFinal);
             this.Controls.Add(this.dateTimePickerInicio);
             this.Name = "VisualizarAsientos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisualizarAsientos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAsientos)).EndInit();
             this.ResumeLayout(false);

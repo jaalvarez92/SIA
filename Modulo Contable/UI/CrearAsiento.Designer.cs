@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridViewAsientos = new System.Windows.Forms.DataGridView();
+            this.Cuenta = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Moneda = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.DebitoLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreditoLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DebitoSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreditoSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DebitoOtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreditoOtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonAgregarLinea = new System.Windows.Forms.Button();
             this.buttonEliminarLinea = new System.Windows.Forms.Button();
             this.buttonGuardar = new System.Windows.Forms.Button();
@@ -41,14 +49,6 @@
             this.labelTotalCredito = new System.Windows.Forms.Label();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Cuenta = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.DebitoLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreditoLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DebitoSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreditoSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DebitoOtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreditoOtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAsientos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,44 +74,108 @@
             this.dataGridViewAsientos.TabIndex = 0;
             this.dataGridViewAsientos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAsientos_CellEndEdit);
             // 
+            // Cuenta
+            // 
+            this.Cuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cuenta.HeaderText = "Cuenta";
+            this.Cuenta.Name = "Cuenta";
+            // 
+            // Moneda
+            // 
+            this.Moneda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Moneda.HeaderText = "Moneda";
+            this.Moneda.Name = "Moneda";
+            // 
+            // DebitoLocal
+            // 
+            this.DebitoLocal.HeaderText = "Débito(local)";
+            this.DebitoLocal.Name = "DebitoLocal";
+            // 
+            // CreditoLocal
+            // 
+            this.CreditoLocal.HeaderText = "Crédito(local)";
+            this.CreditoLocal.Name = "CreditoLocal";
+            // 
+            // DebitoSistema
+            // 
+            this.DebitoSistema.HeaderText = "Débito(sistema)";
+            this.DebitoSistema.Name = "DebitoSistema";
+            this.DebitoSistema.ReadOnly = true;
+            // 
+            // CreditoSistema
+            // 
+            this.CreditoSistema.HeaderText = "Crédito(sistema)";
+            this.CreditoSistema.Name = "CreditoSistema";
+            this.CreditoSistema.ReadOnly = true;
+            // 
+            // DebitoOtra
+            // 
+            this.DebitoOtra.HeaderText = "Débito(Otras)";
+            this.DebitoOtra.Name = "DebitoOtra";
+            // 
+            // CreditoOtra
+            // 
+            this.CreditoOtra.HeaderText = "Crédito(Otras)";
+            this.CreditoOtra.Name = "CreditoOtra";
+            // 
             // buttonAgregarLinea
             // 
-            this.buttonAgregarLinea.Location = new System.Drawing.Point(619, 28);
+            this.buttonAgregarLinea.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonAgregarLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregarLinea.ForeColor = System.Drawing.Color.White;
+            this.buttonAgregarLinea.Image = global::UI.Properties.Resources.add;
+            this.buttonAgregarLinea.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAgregarLinea.Location = new System.Drawing.Point(554, 12);
             this.buttonAgregarLinea.Name = "buttonAgregarLinea";
-            this.buttonAgregarLinea.Size = new System.Drawing.Size(118, 23);
+            this.buttonAgregarLinea.Size = new System.Drawing.Size(153, 33);
             this.buttonAgregarLinea.TabIndex = 1;
             this.buttonAgregarLinea.Text = "Agregar Línea";
-            this.buttonAgregarLinea.UseVisualStyleBackColor = true;
+            this.buttonAgregarLinea.UseVisualStyleBackColor = false;
             this.buttonAgregarLinea.Click += new System.EventHandler(this.buttonAgregarLinea_Click);
             // 
             // buttonEliminarLinea
             // 
-            this.buttonEliminarLinea.Location = new System.Drawing.Point(743, 28);
+            this.buttonEliminarLinea.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonEliminarLinea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarLinea.ForeColor = System.Drawing.Color.White;
+            this.buttonEliminarLinea.Image = global::UI.Properties.Resources.delete;
+            this.buttonEliminarLinea.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEliminarLinea.Location = new System.Drawing.Point(713, 12);
             this.buttonEliminarLinea.Name = "buttonEliminarLinea";
-            this.buttonEliminarLinea.Size = new System.Drawing.Size(118, 23);
+            this.buttonEliminarLinea.Size = new System.Drawing.Size(143, 33);
             this.buttonEliminarLinea.TabIndex = 2;
             this.buttonEliminarLinea.Text = "Eliminar Línea";
-            this.buttonEliminarLinea.UseVisualStyleBackColor = true;
+            this.buttonEliminarLinea.UseVisualStyleBackColor = false;
             this.buttonEliminarLinea.Click += new System.EventHandler(this.buttonEliminarLinea_Click);
             // 
             // buttonGuardar
             // 
+            this.buttonGuardar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGuardar.ForeColor = System.Drawing.Color.White;
+            this.buttonGuardar.Image = global::UI.Properties.Resources.accept;
+            this.buttonGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonGuardar.Location = new System.Drawing.Point(618, 326);
             this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(118, 23);
+            this.buttonGuardar.Size = new System.Drawing.Size(118, 29);
             this.buttonGuardar.TabIndex = 3;
             this.buttonGuardar.Text = "Guardar";
-            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.UseVisualStyleBackColor = false;
             this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
             // 
             // buttonAtras
             // 
+            this.buttonAtras.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAtras.ForeColor = System.Drawing.Color.White;
+            this.buttonAtras.Image = global::UI.Properties.Resources.arrow_left;
+            this.buttonAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAtras.Location = new System.Drawing.Point(742, 326);
             this.buttonAtras.Name = "buttonAtras";
-            this.buttonAtras.Size = new System.Drawing.Size(118, 23);
+            this.buttonAtras.Size = new System.Drawing.Size(118, 29);
             this.buttonAtras.TabIndex = 33;
             this.buttonAtras.Text = "Atrás";
-            this.buttonAtras.UseVisualStyleBackColor = true;
+            this.buttonAtras.UseVisualStyleBackColor = false;
             this.buttonAtras.Click += new System.EventHandler(this.buttonAtras_Click);
             // 
             // dateTimePickerFechaDocumento
@@ -182,54 +246,11 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Descripción:";
             // 
-            // Cuenta
-            // 
-            this.Cuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cuenta.HeaderText = "Cuenta";
-            this.Cuenta.Name = "Cuenta";
-            // 
-            // Moneda
-            // 
-            this.Moneda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.Name = "Moneda";
-            // 
-            // DebitoLocal
-            // 
-            this.DebitoLocal.HeaderText = "Débito(local)";
-            this.DebitoLocal.Name = "DebitoLocal";
-            // 
-            // CreditoLocal
-            // 
-            this.CreditoLocal.HeaderText = "Crédito(local)";
-            this.CreditoLocal.Name = "CreditoLocal";
-            // 
-            // DebitoSistema
-            // 
-            this.DebitoSistema.HeaderText = "Débito(sistema)";
-            this.DebitoSistema.Name = "DebitoSistema";
-            this.DebitoSistema.ReadOnly = true;
-            // 
-            // CreditoSistema
-            // 
-            this.CreditoSistema.HeaderText = "Crédito(sistema)";
-            this.CreditoSistema.Name = "CreditoSistema";
-            this.CreditoSistema.ReadOnly = true;
-            // 
-            // DebitoOtra
-            // 
-            this.DebitoOtra.HeaderText = "Débito(Otras)";
-            this.DebitoOtra.Name = "DebitoOtra";
-            // 
-            // CreditoOtra
-            // 
-            this.CreditoOtra.HeaderText = "Crédito(Otras)";
-            this.CreditoOtra.Name = "CreditoOtra";
-            // 
             // CrearAsiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(873, 367);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxDescripcion);
@@ -245,6 +266,7 @@
             this.Controls.Add(this.buttonAgregarLinea);
             this.Controls.Add(this.dataGridViewAsientos);
             this.Name = "CrearAsiento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearAsiento";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAsientos)).EndInit();
             this.ResumeLayout(false);

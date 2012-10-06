@@ -38,12 +38,12 @@
             this.buttonAgregarPeriodoContable = new System.Windows.Forms.Button();
             this.labNombreEmpresa = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labCedJuridica = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.labCedJuridica = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -54,9 +54,11 @@
             this.buttonCuentas.BackColor = System.Drawing.SystemColors.HotTrack;
             this.buttonCuentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCuentas.ForeColor = System.Drawing.Color.White;
+            this.buttonCuentas.Image = global::UI.Properties.Resources.book_add;
+            this.buttonCuentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCuentas.Location = new System.Drawing.Point(14, 39);
             this.buttonCuentas.Name = "buttonCuentas";
-            this.buttonCuentas.Size = new System.Drawing.Size(177, 34);
+            this.buttonCuentas.Size = new System.Drawing.Size(190, 34);
             this.buttonCuentas.TabIndex = 0;
             this.buttonCuentas.Text = "Crear Cuentas";
             this.buttonCuentas.UseVisualStyleBackColor = false;
@@ -67,9 +69,11 @@
             this.buttonAsientos.BackColor = System.Drawing.SystemColors.HotTrack;
             this.buttonAsientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAsientos.ForeColor = System.Drawing.Color.White;
+            this.buttonAsientos.Image = global::UI.Properties.Resources.application;
+            this.buttonAsientos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAsientos.Location = new System.Drawing.Point(210, 39);
             this.buttonAsientos.Name = "buttonAsientos";
-            this.buttonAsientos.Size = new System.Drawing.Size(177, 34);
+            this.buttonAsientos.Size = new System.Drawing.Size(191, 34);
             this.buttonAsientos.TabIndex = 1;
             this.buttonAsientos.Text = "Crear Asientos";
             this.buttonAsientos.UseVisualStyleBackColor = false;
@@ -80,9 +84,11 @@
             this.buttonEmpresa.BackColor = System.Drawing.SystemColors.HotTrack;
             this.buttonEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmpresa.ForeColor = System.Drawing.Color.White;
+            this.buttonEmpresa.Image = global::UI.Properties.Resources.computer_add;
+            this.buttonEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEmpresa.Location = new System.Drawing.Point(14, 79);
             this.buttonEmpresa.Name = "buttonEmpresa";
-            this.buttonEmpresa.Size = new System.Drawing.Size(177, 34);
+            this.buttonEmpresa.Size = new System.Drawing.Size(190, 34);
             this.buttonEmpresa.TabIndex = 2;
             this.buttonEmpresa.Text = "Crear Empresa";
             this.buttonEmpresa.UseVisualStyleBackColor = false;
@@ -93,9 +99,11 @@
             this.buttonReportes.BackColor = System.Drawing.SystemColors.HotTrack;
             this.buttonReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReportes.ForeColor = System.Drawing.Color.White;
+            this.buttonReportes.Image = global::UI.Properties.Resources.application_cascade;
+            this.buttonReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonReportes.Location = new System.Drawing.Point(210, 79);
             this.buttonReportes.Name = "buttonReportes";
-            this.buttonReportes.Size = new System.Drawing.Size(177, 34);
+            this.buttonReportes.Size = new System.Drawing.Size(191, 34);
             this.buttonReportes.TabIndex = 3;
             this.buttonReportes.Text = "Reportes y Consultas";
             this.buttonReportes.UseVisualStyleBackColor = false;
@@ -106,9 +114,11 @@
             this.buttonCerrarSesion.BackColor = System.Drawing.SystemColors.HotTrack;
             this.buttonCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.buttonCerrarSesion.Location = new System.Drawing.Point(517, 332);
+            this.buttonCerrarSesion.Image = global::UI.Properties.Resources.bullet_go;
+            this.buttonCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCerrarSesion.Location = new System.Drawing.Point(495, 343);
             this.buttonCerrarSesion.Name = "buttonCerrarSesion";
-            this.buttonCerrarSesion.Size = new System.Drawing.Size(124, 26);
+            this.buttonCerrarSesion.Size = new System.Drawing.Size(146, 27);
             this.buttonCerrarSesion.TabIndex = 4;
             this.buttonCerrarSesion.Text = "Cerrar Sesión";
             this.buttonCerrarSesion.UseVisualStyleBackColor = false;
@@ -119,9 +129,11 @@
             this.buttonCierre.BackColor = System.Drawing.SystemColors.HotTrack;
             this.buttonCierre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCierre.ForeColor = System.Drawing.Color.White;
+            this.buttonCierre.Image = global::UI.Properties.Resources.calculator_edit;
+            this.buttonCierre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCierre.Location = new System.Drawing.Point(14, 119);
             this.buttonCierre.Name = "buttonCierre";
-            this.buttonCierre.Size = new System.Drawing.Size(177, 34);
+            this.buttonCierre.Size = new System.Drawing.Size(190, 34);
             this.buttonCierre.TabIndex = 5;
             this.buttonCierre.Text = "Realizar Cierre";
             this.buttonCierre.UseVisualStyleBackColor = false;
@@ -143,9 +155,11 @@
             this.buttonAgregarPeriodoContable.BackColor = System.Drawing.SystemColors.HotTrack;
             this.buttonAgregarPeriodoContable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarPeriodoContable.ForeColor = System.Drawing.Color.White;
+            this.buttonAgregarPeriodoContable.Image = global::UI.Properties.Resources.clock_add;
+            this.buttonAgregarPeriodoContable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAgregarPeriodoContable.Location = new System.Drawing.Point(210, 119);
             this.buttonAgregarPeriodoContable.Name = "buttonAgregarPeriodoContable";
-            this.buttonAgregarPeriodoContable.Size = new System.Drawing.Size(177, 34);
+            this.buttonAgregarPeriodoContable.Size = new System.Drawing.Size(191, 34);
             this.buttonAgregarPeriodoContable.TabIndex = 7;
             this.buttonAgregarPeriodoContable.Text = "Agregar Periodo Contable";
             this.buttonAgregarPeriodoContable.UseVisualStyleBackColor = false;
@@ -179,15 +193,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Empresa";
             // 
-            // labCedJuridica
+            // label4
             // 
-            this.labCedJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCedJuridica.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labCedJuridica.Location = new System.Drawing.Point(42, 146);
-            this.labCedJuridica.Name = "labCedJuridica";
-            this.labCedJuridica.Size = new System.Drawing.Size(142, 42);
-            this.labCedJuridica.TabIndex = 10;
-            this.labCedJuridica.Text = "Cedula Juridica";
+            this.label4.Image = global::UI.Properties.Resources.key_go;
+            this.label4.Location = new System.Drawing.Point(6, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 28);
+            this.label4.TabIndex = 13;
             // 
             // label5
             // 
@@ -198,6 +210,32 @@
             this.label5.Size = new System.Drawing.Size(142, 42);
             this.label5.TabIndex = 12;
             this.label5.Text = "Id de la Empresa";
+            // 
+            // label3
+            // 
+            this.label3.Image = global::UI.Properties.Resources.book;
+            this.label3.Location = new System.Drawing.Point(6, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 28);
+            this.label3.TabIndex = 11;
+            // 
+            // labCedJuridica
+            // 
+            this.labCedJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCedJuridica.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labCedJuridica.Location = new System.Drawing.Point(42, 146);
+            this.labCedJuridica.Name = "labCedJuridica";
+            this.labCedJuridica.Size = new System.Drawing.Size(142, 42);
+            this.labCedJuridica.TabIndex = 10;
+            this.labCedJuridica.Text = "Cedula Juridica";
+            // 
+            // label2
+            // 
+            this.label2.Image = global::UI.Properties.Resources.computer;
+            this.label2.Location = new System.Drawing.Point(6, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 28);
+            this.label2.TabIndex = 9;
             // 
             // groupBox2
             // 
@@ -216,30 +254,6 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones";
-            // 
-            // label4
-            // 
-            this.label4.Image = global::UI.Properties.Resources.key_go;
-            this.label4.Location = new System.Drawing.Point(6, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 28);
-            this.label4.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.Image = global::UI.Properties.Resources.book;
-            this.label3.Location = new System.Drawing.Point(6, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 28);
-            this.label3.TabIndex = 11;
-            // 
-            // label2
-            // 
-            this.label2.Image = global::UI.Properties.Resources.computer;
-            this.label2.Location = new System.Drawing.Point(6, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 28);
-            this.label2.TabIndex = 9;
             // 
             // MenuPrincipal
             // 
