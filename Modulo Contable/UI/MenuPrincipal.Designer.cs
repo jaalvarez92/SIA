@@ -137,6 +137,7 @@
             this.buttonCierre.TabIndex = 5;
             this.buttonCierre.Text = "Realizar Cierre";
             this.buttonCierre.UseVisualStyleBackColor = false;
+            this.buttonCierre.Click += new System.EventHandler(this.buttonCierre_Click);
             // 
             // label1
             // 

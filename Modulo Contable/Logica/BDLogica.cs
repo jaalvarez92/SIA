@@ -18,5 +18,10 @@ namespace Logica
         {            
             return ManejadorBaseDatos.Instancia.obtenerDataSet(pNombreSP);
         }
+
+        public DataSet RealizarCierre(string pNombreSP)
+        {
+            return ManejadorBaseDatos.Instancia.obtenerDataSet(pNombreSP);
+        }
     }
 }

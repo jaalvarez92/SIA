@@ -55,13 +55,28 @@ namespace UI
             new Configuracion().Show(this);
             this.Hide();
         }
-        #endregion
 
         private void buttonReportes_Click(object sender, EventArgs e)
         {
             new Reportes(labNombreEmpresa.Text).Show(this);
             this.Hide();
         }
+
+        private void buttonCierre_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea realizar el cierre contable?", "Alerta", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                Logica.BDLogica accesoDB = new Logica.BDLogica();
+                if(accesoDB.RealizarCierre("SP_REALIZAR_CIERREPERIODO")!=null){
+                    MessageBox.Show("Se realizó el cierre contable correctamente","Mensaje",MessageBoxButtons.OK);
+                }else{
+                    MessageBox.Show("Hubo un error al ejecutar el procedimiento","Mensaje",MessageBoxButtons.OK);
+                }
+            }
+        }
+        #endregion
+
+
 
     }
 }
