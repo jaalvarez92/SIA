@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGenerarBalanceGeneral = new System.Windows.Forms.Button();
+            this.btnGenerarEstadoResultados = new System.Windows.Forms.Button();
+            this.btnGenerarBalanceComprobacion = new System.Windows.Forms.Button();
             this.labelReportes = new System.Windows.Forms.Label();
             this.buttonAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,32 +46,35 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btnGenerarBalanceGeneral
             // 
-            this.button3.Location = new System.Drawing.Point(35, 195);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 67);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Balance General";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnGenerarBalanceGeneral.Location = new System.Drawing.Point(35, 195);
+            this.btnGenerarBalanceGeneral.Name = "btnGenerarBalanceGeneral";
+            this.btnGenerarBalanceGeneral.Size = new System.Drawing.Size(140, 67);
+            this.btnGenerarBalanceGeneral.TabIndex = 8;
+            this.btnGenerarBalanceGeneral.Text = "Balance General";
+            this.btnGenerarBalanceGeneral.UseVisualStyleBackColor = true;
+            this.btnGenerarBalanceGeneral.Click += new System.EventHandler(this.btnGenerarBalanceGeneral_Click);
             // 
-            // button2
+            // btnGenerarEstadoResultados
             // 
-            this.button2.Location = new System.Drawing.Point(320, 71);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 67);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Estado de Resultados";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGenerarEstadoResultados.Location = new System.Drawing.Point(320, 71);
+            this.btnGenerarEstadoResultados.Name = "btnGenerarEstadoResultados";
+            this.btnGenerarEstadoResultados.Size = new System.Drawing.Size(140, 67);
+            this.btnGenerarEstadoResultados.TabIndex = 7;
+            this.btnGenerarEstadoResultados.Text = "Estado de Resultados";
+            this.btnGenerarEstadoResultados.UseVisualStyleBackColor = true;
+            this.btnGenerarEstadoResultados.Click += new System.EventHandler(this.btnGenerarEstadoResultados_Click);
             // 
-            // button1
+            // btnGenerarBalanceComprobacion
             // 
-            this.button1.Location = new System.Drawing.Point(35, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 67);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Balance de Comprobación";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGenerarBalanceComprobacion.Location = new System.Drawing.Point(35, 71);
+            this.btnGenerarBalanceComprobacion.Name = "btnGenerarBalanceComprobacion";
+            this.btnGenerarBalanceComprobacion.Size = new System.Drawing.Size(140, 67);
+            this.btnGenerarBalanceComprobacion.TabIndex = 6;
+            this.btnGenerarBalanceComprobacion.Text = "Balance de Comprobación";
+            this.btnGenerarBalanceComprobacion.UseVisualStyleBackColor = true;
+            this.btnGenerarBalanceComprobacion.Click += new System.EventHandler(this.btnGenerarBalanceComprobacion_Click);
             // 
             // labelReportes
             // 
@@ -99,9 +102,9 @@
             this.ClientSize = new System.Drawing.Size(494, 367);
             this.Controls.Add(this.buttonAtras);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGenerarBalanceGeneral);
+            this.Controls.Add(this.btnGenerarEstadoResultados);
+            this.Controls.Add(this.btnGenerarBalanceComprobacion);
             this.Controls.Add(this.labelReportes);
             this.Name = "Reportes";
             this.Text = "Reportes";
@@ -113,9 +116,9 @@
         #endregion
 
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenerarBalanceGeneral;
+        private System.Windows.Forms.Button btnGenerarEstadoResultados;
+        private System.Windows.Forms.Button btnGenerarBalanceComprobacion;
         private System.Windows.Forms.Label labelReportes;
         private System.Windows.Forms.Button buttonAtras;
     }

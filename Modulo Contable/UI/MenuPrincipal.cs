@@ -59,7 +59,7 @@ namespace UI
 
         private void buttonReportes_Click(object sender, EventArgs e)
         {
-            new Reportes().Show(this);
+            new Reportes(labNombreEmpresa.Text).Show(this);
             this.Hide();
         }
 

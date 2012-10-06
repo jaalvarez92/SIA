@@ -69,6 +69,7 @@ namespace UI
                     MenuPrincipal _Menu = new MenuPrincipal();
                     Entity empresa_seleccionada = _Empresas.Get("nombreempresa", NombreEmpresa);
                     ConfigurationManager.AppSettings.Set("Empresa", ((int)empresa_seleccionada.Get("idempresa")).ToString());
+                    _Menu.labNombreEmpresa.Text = comboBoxEmpresa.Text;
                     _Menu.Show(this);
                     this.Hide();
                 }

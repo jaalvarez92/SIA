@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AccesoDatos;
+using System.Data;
 
 namespace Logica
 {
@@ -12,6 +13,10 @@ namespace Logica
         public void EjecutarScript(String pEsquema)
         {
             ManejadorBaseDatos.Instancia.EjecutarScript(pEsquema);
+        }
+        public DataSet ObtenerReportes(String pNombreSP)
+        {            
+            return ManejadorBaseDatos.Instancia.obtenerDataSet(pNombreSP);
         }
     }
 }

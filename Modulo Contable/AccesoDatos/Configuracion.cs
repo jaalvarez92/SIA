@@ -13,7 +13,7 @@ namespace AccesoDatos
         private const string CADENA_CONEXION = "ConnectionString";
         private const string DA_FILE = "DAFile";
         private const string ID_EMPRESA = "Empresa";
-        private const string ESQUEMA    = "Esquema";
+        private const string ESQUEMA = "Esquema";
         #endregion
 
         #region Atributos

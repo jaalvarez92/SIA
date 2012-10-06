@@ -26,12 +26,12 @@ namespace AccesoDatos
             parametros.Set("pLogotipo", pLogotipo);
             parametros.Set("pMonedaLocal", pMonedaLocal);
             parametros.Set("pMonedaSistema", pMonedaSistema);
-            Entity resultado = ManejadorBaseDatos.Instancia.EjecutarSP("crear_empresa", parametros,pEsquema);
+            Entity resultado = ManejadorBaseDatos.Instancia.EjecutarSP("crear_empresa", parametros, pEsquema);
             return resultado;
         }
 
-        public static Entity AgregarPeriodoContable(DateTime pFechaInicioC, DateTime pFechaFinalC,DateTime pFechaInicioD, 
-            DateTime pFechaFinalD,DateTime pFechaInicioV, DateTime pFechaFinalV)
+        public static Entity AgregarPeriodoContable(DateTime pFechaInicioC, DateTime pFechaFinalC, DateTime pFechaInicioD,
+            DateTime pFechaFinalD, DateTime pFechaInicioV, DateTime pFechaFinalV)
         {
             Entity parametros = new Entity();
             parametros.Set("pFechaInicioC", pFechaInicioC);
@@ -40,7 +40,7 @@ namespace AccesoDatos
             parametros.Set("pFechaFinD", pFechaFinalD);
             parametros.Set("pFechaInicioV", pFechaInicioV);
             parametros.Set("pFechaFinV", pFechaFinalV);
-            Entity resultado = ManejadorBaseDatos.Instancia.EjecutarSP("crear_periodo_contable",parametros);
+            Entity resultado = ManejadorBaseDatos.Instancia.EjecutarSP("crear_periodo_contable", parametros);
             return resultado;
         }
 

@@ -333,5 +333,35 @@ namespace AccesoDatos
             }
             Connection.Close();
         }
+
+        public DataSet obtenerDataSet(string storeProcedure)
+        {
+            SqlConnection Connection = new SqlConnection(Configuracion.ConnectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataSet ds = new DataSet();
+            string consultaSQL = storeProcedure;
+
+            try
+            {                                                         
+                    consultaSQL += "'" + Configuracion.IdEmpresa + "'";
+                Connection.Open();
+                SqlCommand command = new SqlCommand(consultaSQL, Connection);
+                adapter.SelectCommand = command;
+                adapter.Fill(ds);
+                adapter.Dispose();
+                command.Dispose();
+                return ds;
+
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+
+        }
     }
 }
