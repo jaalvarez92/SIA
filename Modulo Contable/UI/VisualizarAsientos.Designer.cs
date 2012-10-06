@@ -33,21 +33,20 @@
             this.botonConsultarAsientos = new System.Windows.Forms.Button();
             this.botonCambiarFecha = new System.Windows.Forms.Button();
             this.dataGridViewAsientos = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoAsiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipoasiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Debe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Haber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DebeSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HaberSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxNumeroAsiento = new System.Windows.Forms.TextBox();
             this.botonAnularAsiento = new System.Windows.Forms.Button();
             this.botonAtras = new System.Windows.Forms.Button();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodigoAsiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipoasiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Debe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Haber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DebeSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HaberSistema = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAsientos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +98,6 @@
             this.CodigoAsiento,
             this.Tipoasiento,
             this.NombreCuenta,
-            this.Moneda,
             this.Debe,
             this.Haber,
             this.DebeSistema,
@@ -109,60 +107,6 @@
             this.dataGridViewAsientos.ReadOnly = true;
             this.dataGridViewAsientos.Size = new System.Drawing.Size(948, 406);
             this.dataGridViewAsientos.TabIndex = 5;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha Contabilizada";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // CodigoAsiento
-            // 
-            this.CodigoAsiento.HeaderText = "Codigo Asiento";
-            this.CodigoAsiento.Name = "CodigoAsiento";
-            this.CodigoAsiento.ReadOnly = true;
-            // 
-            // Tipoasiento
-            // 
-            this.Tipoasiento.HeaderText = "Tipo Asiento";
-            this.Tipoasiento.Name = "Tipoasiento";
-            this.Tipoasiento.ReadOnly = true;
-            // 
-            // NombreCuenta
-            // 
-            this.NombreCuenta.HeaderText = "Nombre Cuenta";
-            this.NombreCuenta.Name = "NombreCuenta";
-            this.NombreCuenta.ReadOnly = true;
-            // 
-            // Moneda
-            // 
-            this.Moneda.HeaderText = "Moneda";
-            this.Moneda.Name = "Moneda";
-            this.Moneda.ReadOnly = true;
-            // 
-            // Debe
-            // 
-            this.Debe.HeaderText = "Débito (Local)";
-            this.Debe.Name = "Debe";
-            this.Debe.ReadOnly = true;
-            // 
-            // Haber
-            // 
-            this.Haber.HeaderText = "Crédito (Local)";
-            this.Haber.Name = "Haber";
-            this.Haber.ReadOnly = true;
-            // 
-            // DebeSistema
-            // 
-            this.DebeSistema.HeaderText = "Débito (Sistema)";
-            this.DebeSistema.Name = "DebeSistema";
-            this.DebeSistema.ReadOnly = true;
-            // 
-            // HaberSistema
-            // 
-            this.HaberSistema.HeaderText = "Crédito (Sistema)";
-            this.HaberSistema.Name = "HaberSistema";
-            this.HaberSistema.ReadOnly = true;
             // 
             // label1
             // 
@@ -228,6 +172,54 @@
             this.botonAtras.UseVisualStyleBackColor = false;
             this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha Contabilizada";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // CodigoAsiento
+            // 
+            this.CodigoAsiento.HeaderText = "Codigo Asiento";
+            this.CodigoAsiento.Name = "CodigoAsiento";
+            this.CodigoAsiento.ReadOnly = true;
+            // 
+            // Tipoasiento
+            // 
+            this.Tipoasiento.HeaderText = "Tipo Asiento";
+            this.Tipoasiento.Name = "Tipoasiento";
+            this.Tipoasiento.ReadOnly = true;
+            // 
+            // NombreCuenta
+            // 
+            this.NombreCuenta.HeaderText = "Nombre Cuenta";
+            this.NombreCuenta.Name = "NombreCuenta";
+            this.NombreCuenta.ReadOnly = true;
+            // 
+            // Debe
+            // 
+            this.Debe.HeaderText = "Débito (Local)";
+            this.Debe.Name = "Debe";
+            this.Debe.ReadOnly = true;
+            // 
+            // Haber
+            // 
+            this.Haber.HeaderText = "Crédito (Local)";
+            this.Haber.Name = "Haber";
+            this.Haber.ReadOnly = true;
+            // 
+            // DebeSistema
+            // 
+            this.DebeSistema.HeaderText = "Débito (Sistema)";
+            this.DebeSistema.Name = "DebeSistema";
+            this.DebeSistema.ReadOnly = true;
+            // 
+            // HaberSistema
+            // 
+            this.HaberSistema.HeaderText = "Crédito (Sistema)";
+            this.HaberSistema.Name = "HaberSistema";
+            this.HaberSistema.ReadOnly = true;
+            // 
             // VisualizarAsientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,18 +255,17 @@
         private System.Windows.Forms.DataGridView dataGridViewAsientos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoAsiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipoasiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Debe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Haber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DebeSistema;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HaberSistema;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxNumeroAsiento;
         private System.Windows.Forms.Button botonAnularAsiento;
         private System.Windows.Forms.Button botonAtras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoAsiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipoasiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Debe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Haber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DebeSistema;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HaberSistema;
     }
 }

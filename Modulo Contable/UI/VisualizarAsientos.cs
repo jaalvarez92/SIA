@@ -38,12 +38,20 @@ namespace UI
 
         private void mostrarAsientos()
         {
-            DataSet ds = new DataSet();
-            /*_Asientos = ConsultarAsientoLogica.ObtenerAsientos(FechaInicio, FechaFinal);
-            foreach (Entity asientos in _Asientos)
-            {*/
-                dataGridViewAsientos.DataSource = _Asientos;
-            //}
+            dataGridViewAsientos.Rows.Clear();
+            _Asientos = AsientoLogica.ObtenerAsientos(FechaInicio, FechaFinal);
+            foreach (Entity asiento in _Asientos)
+            {
+                String fechaC = ((DateTime)asiento.Get("fechacontabilizado")).ToString();
+                String codigo = ((int)asiento.Get("codigoasiento")).ToString();
+                String descripcion = (String)asiento.Get("descripcion");
+                String cuenta = (String)asiento.Get("nombre");
+                String debito_local = ((decimal)asiento.Get("debito_local")).ToString();
+                String credito_local = ((decimal)asiento.Get("credito_local")).ToString();
+                String debito_sistema = ((decimal)asiento.Get("debito_sistema")).ToString();
+                String credito_sistema = ((decimal)asiento.Get("credito_sistema")).ToString();
+                dataGridViewAsientos.Rows.Add(fechaC, codigo, descripcion, cuenta, debito_local, credito_local, debito_sistema, credito_sistema);
+            }
         }
 
         #endregion
@@ -66,7 +74,10 @@ namespace UI
             botonConsultarAsientos.Enabled = true;
         }
 
-        private void anularAsiento() { }
+        private void anularAsiento(int pCodigoAsiento) 
+        {
+            AsientoLogica.NulificarAsiento(pCodigoAsiento);
+        }
 
         private void botonAtras_Click(object sender, EventArgs e)
         {
@@ -86,7 +97,7 @@ namespace UI
                     return;	   
                 }	   
 	   
-                anularAsiento();	   
+                anularAsiento(numerlAsiento);	   
             }	   
             catch (Exception Ex) { MessageBox.Show("Debe Ingresar un número de asiento a insertar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }	   
 
